@@ -9,9 +9,8 @@ export async function DELETE(
     request: Request,
     { params }: { params: { messageid: string } }
 ) {
-    const messageid = params.messageid;
-
     await dbConnect();
+    const messageId = params.messageid;
 
     const session = await getServerSession(authOptions);
     const user: User = session?.user as User;
@@ -33,7 +32,7 @@ export async function DELETE(
         const updatedResult = await UserModel.updateOne(
             { _id: user._id },
             {
-                $pull: { messages: { _id: messageid } }, // Use the correctly obtained messageid
+                $pull: { messages: { _id: messageId } }, // Use the correctly obtained messageid
             }
         );
 
