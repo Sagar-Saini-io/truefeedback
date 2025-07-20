@@ -3,26 +3,32 @@ import UserModel from "@/model/User.model";
 import { getServerSession } from "next-auth";
 import { User } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
+import { NextRequest, NextResponse } from "next/server"; // Import NextRequest and NextResponse
+
+// Define a type for the dynamic route context
+interface MessageContext {
+    params: {
+        messageid: string;
+    };
+}
 
 export async function DELETE(
-    request: Request,
-    { params }: { params: { messageid: string } }
+    request: NextRequest, // Use NextRequest for the first argument
+    context: MessageContext // Use the defined MessageContext for the second argument
 ) {
-    //
+    // Correctly access the messageid from the context.params object
+    const { messageid } = context.params;
 
-    // const messageId = (await params).messageid;
-
-    // console.log("messageID in route.ts :: ", messageId);
+    console.log("messageID in route.ts :: ", messageid);
 
     await dbConnect();
-
-    const messageId = params.messageid;
 
     const session = await getServerSession(authOptions);
     const user: User = session?.user as User;
 
     if (!session || !session.user) {
-        return Response.json(
+        return NextResponse.json(
+            // Use NextResponse for JSON responses
             {
                 success: false,
                 message: "Not Authenticated !",
@@ -32,17 +38,17 @@ export async function DELETE(
             }
         );
     }
-    //
+
     try {
         const updatedResult = await UserModel.updateOne(
             { _id: user._id },
             {
-                $pull: { messages: { _id: messageId } },
+                $pull: { messages: { _id: messageid } }, // Use the correctly obtained messageid
             }
         );
 
-        if (updatedResult.modifiedCount == 0) {
-            return Response.json(
+        if (updatedResult.modifiedCount === 0) {
+            return NextResponse.json(
                 {
                     success: false,
                     message: "Message not found or already deleted",
@@ -53,7 +59,7 @@ export async function DELETE(
             );
         }
 
-        return Response.json(
+        return NextResponse.json(
             {
                 success: true,
                 message: "Message Deleted",
@@ -62,19 +68,16 @@ export async function DELETE(
                 status: 200,
             }
         );
-
-        //
     } catch (error) {
         console.log("Error in delete-message route.ts :: ", error);
-        return Response.json(
+        return NextResponse.json(
             {
                 success: false,
-                message: "Error deleting  message",
+                message: "Error deleting message",
             },
             {
                 status: 500,
             }
         );
     }
-    //
 }
