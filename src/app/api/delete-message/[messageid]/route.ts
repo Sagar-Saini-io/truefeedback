@@ -3,21 +3,23 @@ import UserModel from "@/model/User.model";
 import { getServerSession } from "next-auth";
 import { User } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
-import { NextRequest, NextResponse } from "next/server"; // Import NextRequest and NextResponse
+import { NextRequest, NextResponse } from "next/server";
 
 export async function DELETE(
-    request: Request,
-    { params }: { params: { messageid: string } }
+    request: NextRequest,
+    context: { params: { messageid: string } }
 ) {
+    const { messageid } = context.params;
+
+    console.log("messageID in route.ts :: ", messageid);
+
     await dbConnect();
-    const messageId = params.messageid;
 
     const session = await getServerSession(authOptions);
     const user: User = session?.user as User;
 
     if (!session || !session.user) {
         return NextResponse.json(
-            // Use NextResponse for JSON responses
             {
                 success: false,
                 message: "Not Authenticated !",
@@ -32,7 +34,7 @@ export async function DELETE(
         const updatedResult = await UserModel.updateOne(
             { _id: user._id },
             {
-                $pull: { messages: { _id: messageId } }, // Use the correctly obtained messageid
+                $pull: { messages: { _id: messageid } },
             }
         );
 
