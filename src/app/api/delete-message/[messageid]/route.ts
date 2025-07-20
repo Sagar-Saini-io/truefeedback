@@ -8,9 +8,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function DELETE(
     request: NextRequest,
-    params: { messageid: string } // Corrected: Directly define the params object as the second argument
+    { params }: { params: { messageid: string } }
 ) {
-    const { messageid } = params; // Access 'messageid' directly from the 'params' object
+    const { messageid } = params;
 
     console.log("messageID in route.ts :: ", messageid);
 
