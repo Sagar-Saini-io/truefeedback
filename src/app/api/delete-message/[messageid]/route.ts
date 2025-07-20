@@ -6,12 +6,18 @@ import { authOptions } from "../../auth/[...nextauth]/options";
 import { NextRequest, NextResponse } from "next/server";
 //
 
+// Define an interface for the route context for better type clarity
+interface RouteContext {
+    params: {
+        messageid: string;
+    };
+}
+
 export async function DELETE(
     request: NextRequest,
-    { params }: { params: { messageid: string } } // Corrected: Destructure 'params' directly from the second argument
+    context: RouteContext // Pass the context object as the second argument
 ) {
-    const { messageid } = params; // Corrected: Access 'messageid' directly from 'params'
-    console.log("messageID in route.ts :: ", messageid);
+    const { messageid } = context.params; // Correctly access 'messageid' from 'context.params'
 
     await dbConnect();
 
