@@ -38,8 +38,14 @@ type MessageCardProps = {
 function MessageCard({ message, onMessageDelete }: MessageCardProps) {
     //
     const handleDeleteConfirmed = async () => {
+        // const response = await axios.delete<ApiResponse>(
+        //     `/api/delete-message/${message._id}`
+
         const response = await axios.delete<ApiResponse>(
-            `/api/delete-message/${message._id}`
+            "/api/delete-message",
+            {
+                data: { messageid: message._id }, // Data sent in the request body
+            }
 
             // `/api/delete-message?messageid=${message._id}`
         );

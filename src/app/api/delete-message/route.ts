@@ -2,15 +2,18 @@ import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User.model";
 import { getServerSession } from "next-auth";
 import { User } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/options";
+import { authOptions } from "../auth/[...nextauth]/options";
 import { NextRequest, NextResponse } from "next/server";
 //
 
-export async function DELETE(
-    request: NextRequest,
-    { params }: { params: { messageid: string } }
-) {
-    const { messageid } = params;
+// export async function DELETE(
+//     request: NextRequest,
+//     { params }: { params: { messageid: string } }
+// ) {
+//     const { messageid } = params;
+export async function DELETE(request: NextRequest) {
+    const { messageid } = await request.json();
+    // ... use messageId
 
     console.log("messageID in route.ts :: ", messageid);
 
