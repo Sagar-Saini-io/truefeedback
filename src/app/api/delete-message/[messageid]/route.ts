@@ -9,12 +9,14 @@ export async function DELETE(
     { params }: { params: { messageid: string } }
 ) {
     //
-    // const messageId = params.messageid;
-    const messageId = (await params).messageid;
+
+    // const messageId = (await params).messageid;
 
     // console.log("messageID in route.ts :: ", messageId);
 
     await dbConnect();
+
+    const messageId = params.messageid;
 
     const session = await getServerSession(authOptions);
     const user: User = session?.user as User;
