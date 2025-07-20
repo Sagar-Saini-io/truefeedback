@@ -4,13 +4,13 @@ import { getServerSession } from "next-auth";
 import { User } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/options";
 import { NextRequest, NextResponse } from "next/server";
+//
 
 export async function DELETE(
     request: NextRequest,
-    context: { params: { messageid: string } }
+    { params }: { params: { messageid: string } } // Corrected: Destructure 'params' directly from the second argument
 ) {
-    const { messageid } = context.params;
-
+    const { messageid } = params; // Corrected: Access 'messageid' directly from 'params'
     console.log("messageID in route.ts :: ", messageid);
 
     await dbConnect();
