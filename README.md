@@ -18,16 +18,16 @@ Experience TrueFeedback live: [Visit TrueFeedback](https://truefeedback-psi.verc
     ![Home Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/Home.png)
 
 -   **Secure Authentication**: User sign-up and sign-in with NextAuth.js and OTP verification via email.
-    ![Sign-in Page Screenshot](https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/Sign-in.png)
-    ![Verify Account Page Screenshot](https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/verify-Account.png)
+    ![Sign-in Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/Sign-in.png)
+    ![Verify Account Page Screenshot]([https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/verify-Account.png](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/verify-Account.png))
 
 -   **Personalized Profiles**: Each user gets a unique, shareable public link to collect messages.
-    ![Public Profile Link Page Screenshot](https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/public profile link.png)
+    ![Public Profile Link Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/public%20profile%20link.png)
 
 -   **AI Message Suggestions**: Generate creative message prompts using AI.
 
 -   **User Dashboard**: Manage received messages and control message acceptance.
-    ![User Dashboard Screenshot](https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/dashboard.png)
+    ![User Dashboard Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/dashboard.png)
 
 -   **Modern UI**: Built with Shadcn/ui, Tailwind CSS, and other modern libraries for a responsive and intuitive experience.
 
