@@ -45,7 +45,7 @@ Experience TrueFeedback live: [Visit TrueFeedback](https://truefeedback-psi.verc
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Sagar-Saini-io/truefeedback.git](https://github.com/Sagar-Saini-io/truefeedback.git)
+    git clone https://github.com/Sagar-Saini-io/truefeedback.git
     cd truefeedback
     ```
 
@@ -66,8 +66,3 @@ The application will be available at `http://localhost:3000`.
 
 ---
 
-### 🤝 Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request with your changes.
-
----
