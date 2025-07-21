@@ -19,7 +19,7 @@ Experience TrueFeedback live: [Visit TrueFeedback](https://truefeedback-psi.verc
 
 -   **Secure Authentication**: User sign-up and sign-in with NextAuth.js and OTP verification via email.
     ![Sign-in Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/Sign-in.png)
-    ![Verify Account Page Screenshot]([https://raw.githubusercontent.com/Sagar-Saini-io/truefeedback/main/public/verify-Account.png](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/verify-Account.png))
+    ![Verify Account Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/verify-Account.png)
 
 -   **Personalized Profiles**: Each user gets a unique, shareable public link to collect messages.
     ![Public Profile Link Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/public%20profile%20link.png)
