@@ -48,7 +48,7 @@ export async function POST(request: Request) {
                 );
             } else {
                 const hasedPassword = await bcrypt.hash(password, 10);
-                exitingUserByEmail.username = username;
+                // exitingUserByEmail.username = username;
                 exitingUserByEmail.password = hasedPassword;
                 exitingUserByEmail.verifyCode = verifyCode;
                 exitingUserByEmail.verifyCodeExpiry = new Date(
