@@ -7,4 +7,5 @@ export interface ApiResponse {
     isAcceptingMessage?: boolean;
     messages?: Array<Message>;
     content?: string;
+    MailResponse?: any;
 }
