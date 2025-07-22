@@ -1,177 +1,68 @@
-TrueFeedback
-TrueFeedback is a full-stack web application designed to provide a platform for anonymous feedback. Users can sign up, create a unique profile link, and receive messages from others without revealing the sender's identity. The application leverages AI to suggest messages, enhancing the user experience.
+# TrueFeedback
 
-Features
-Anonymous Messaging: Send and receive feedback without revealing identities.
+### 🌟 Dive into Anonymous Insights 🌟
 
-User Authentication: Secure sign-up and sign-in process.
+TrueFeedback is a full-stack web application that provides a secure platform for anonymous messaging. Users can receive genuine feedback and messages without the sender's identity being revealed. The application is built using the latest Next.js features, a robust MERN stack, and is enhanced with AI-powered message suggestions.
 
-OTP Verification: Email-based One-Time Password (OTP) verification for account security.
+---
 
-Personalized Profile Links: Each user gets a unique public link to share for receiving messages.
+### 🚀 Live Demo
 
-AI-Powered Message Suggestions: Utilize AI to generate insightful and engaging message prompts.
+Experience TrueFeedback live: [Visit TrueFeedback](https://truefeedback-psi.vercel.app/)
 
-Dashboard: Manage received messages, toggle message acceptance, and copy your unique link.
+---
 
-Responsive Design: Optimized for various screen sizes (mobile, tablet, desktop).
+### ✨ Features
 
-Technologies Used
-TrueFeedback is built as a full-stack MERN application, utilizing a powerful combination of modern web technologies:
+-   **Anonymous Messaging**: Send and receive messages with full anonymity.
+    ![Home Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/Home.png)
 
-Frontend:
+-   **Secure Authentication**: User sign-up and sign-in with NextAuth.js and OTP verification via email.
+    ![Sign-in Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/Sign-in.png)
+    ![Verify Account Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/verify-Account.png)
 
-Next.js 15.3.4: A React framework for building fast, scalable, and SEO-friendly web applications.
+-   **Personalized Profiles**: Each user gets a unique, shareable public link to collect messages.
+    ![Public Profile Link Page Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/public%20profile%20link.png)
 
-React 19: A JavaScript library for building user interfaces.
+-   **AI Message Suggestions**: Generate creative message prompts using AI.
 
-Shadcn/ui: A collection of reusable components built with Radix UI and Tailwind CSS, providing a beautiful and accessible UI.
+-   **User Dashboard**: Manage received messages and control message acceptance.
+    ![User Dashboard Screenshot](https://github.com/Sagar-Saini-io/Project-pics/blob/f758b3c6b798c1f29ccd0ce771add53da3f59f06/truefeed_back/dashboard.png)
 
-Zod: A TypeScript-first schema declaration and validation library, used for robust form validation.
+-   **Modern UI**: Built with Shadcn/ui, Tailwind CSS, and other modern libraries for a responsive and intuitive experience.
 
-React Hook Form: A performant, flexible, and extensible forms library for React, integrated with Zod for validation.
+---
 
-Tailwind CSS 4: A utility-first CSS framework for rapidly building custom designs.
+### 💻 Technologies
 
-Lucide React: A collection of beautiful and customizable open-source icons.
+-   **Frontend**: Next.js, React, TypeScript, Tailwind CSS, Shadcn/ui, Zod, React Hook Form, Sonner, Lucide React.
+-   **Backend**: Node.js, Express.js, MongoDB, Mongoose, NextAuth.js.
+-   **APIs**: OpenAI for AI suggestions, Resend/Nodemailer for email services.
 
-Embla Carousel React: A lightweight, dependency-free, and flexible carousel library.
+---
 
-Motion: A production-ready animation library for React.
+### 🛠️ Getting Started
 
-Sonner: A toast library for displaying notifications.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Sagar-Saini-io/truefeedback.git
+    cd truefeedback
+    ```
 
-Backend:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Node.js: JavaScript runtime environment.
+3.  **Set up environment variables:**
+    Create a `.env.local` file and add your MongoDB, NextAuth.js, Resend, and OpenAI credentials.
 
-Express.js (implied by MERN stack): A fast, unopinionated, minimalist web framework for Node.js.
+4.  **Run the application:**
+    ```bash
+    npm run dev
+    ```
 
-MongoDB: A NoSQL database for flexible data storage.
+The application will be available at `http://localhost:3000`.
 
-Mongoose: An ODM (Object Data Modeling) library for MongoDB and Node.js.
+---
 
-NextAuth.js (Auth.js): Flexible authentication for Next.js applications, supporting various authentication strategies.
-
-Bcryptjs: A library for hashing passwords securely.
-
-Axios: Promise-based HTTP client for the browser and Node.js.
-
-Resend: For sending transactional emails, specifically for OTP verification.
-
-OpenAI / @ai-sdk/openai: Integration with AI models for generating message suggestions.
-
-Development Tools:
-
-TypeScript 5: A superset of JavaScript that adds static typing.
-
-ESLint 9: For linting and maintaining code quality.
-
-Turbopack: A faster-than-Webpack bundler for Next.js development.
-
-Getting Started
-Follow these steps to set up and run the TrueFeedback project locally.
-
-Prerequisites
-Node.js (v18 or higher recommended)
-
-npm or yarn
-
-MongoDB Atlas account (or local MongoDB instance)
-
-Resend API Key
-
-OpenAI API Key
-
-Installation
-Clone the repository:
-
-git clone https://github.com/Sagar-Saini-io/TrueFeedback.git
-cd TrueFeedback
-
-Install dependencies:
-
-npm install
-
-# or
-
-yarn install
-
-Set up environment variables:
-Create a .env.local file in the root of your project and add the following environment variables:
-
-MONGODB_URI=your_mongodb_connection_string
-NEXTAUTH_SECRET=a_long_random_string_for_nextauth_security
-NEXTAUTH_URL=http://localhost:3000
-
-RESEND_API_KEY=your_resend_api_key
-EMAIL_FROM=your_verified_resend_email_address # e.g., onboarding@yourdomain.com
-
-OPENAI_API_KEY=your_openai_api_key
-
-# If using a specific OpenAI model, you might also need:
-
-# OPENAI_MODEL=gpt-4o
-
-MONGODB_URI: Your MongoDB connection string (e.g., from MongoDB Atlas).
-
-NEXTAUTH_SECRET: Generate a strong random string (e.g., using openssl rand -base64 32).
-
-NEXTAUTH_URL: The URL where your application will run (for local development, it's usually http://localhost:3000).
-
-RESEND_API_KEY: Your API key from Resend for sending emails.
-
-EMAIL_FROM: A verified email address in your Resend account that will be used as the sender.
-
-OPENAI_API_KEY: Your API key for OpenAI.
-
-Running the Development Server
-npm run dev
-
-# or
-
-yarn dev
-
-Open http://localhost:3000 in your browser to see the application.
-
-Building for Production
-npm run build
-
-# or
-
-yarn build
-
-This command will create an optimized production build of your application in the .next folder.
-
-Running the Production Server
-npm start
-
-# or
-
-yarn start
-
-This will run the compiled production build.
-
-Project Structure (Conceptual)
-.
-├── public/ # Static assets (images, favicon)
-├── src/
-│ ├── app/ # Next.js App Router pages and layouts
-│ │ ├── api/ # API routes (for backend logic)
-│ │ │ ├── auth/ # Authentication routes (NextAuth.js)
-│ │ │ └── messages/ # API for sending/receiving messages
-│ │ ├── (auth)/ # Authentication related pages (e.g., sign-in, sign-up)
-│ │ ├── (dashboard)/ # User dashboard pages
-│ │ ├── u/[username]/ # Public profile pages for receiving messages
-│ │ └── layout.tsx # Root layout
-│ ├── components/ # Reusable React components (Shadcn/ui, custom)
-│ ├── lib/ # Utility functions, helpers (e.g., DB connection, AI logic)
-│ ├── models/ # Mongoose schemas/models (e.g., User, Message)
-│ ├── emails/ # React Email templates for OTP
-│ ├── types/ # TypeScript type definitions
-│ └── styles/ # Global styles, Tailwind CSS config
-├── .env.local # Environment variables (local)
-├── next.config.ts # Next.js configuration
-├── package.json # Project dependencies and scripts
-├── tsconfig.json # TypeScript configuration
-└── README.md # This file
